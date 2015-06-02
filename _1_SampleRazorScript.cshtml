@@ -1,0 +1,11 @@
+﻿@{
+	var fullURL = DotNetNuke.Entities.Tabs.TabController.CurrentPage.FullUrl;
+	var pageTitle = DotNetNuke.Entities.Tabs.TabController.CurrentPage.TabName;
+	var facebookURL = "https://www.facebook.com/sharer/sharer.php?u=" + fullURL;
+	var twitterURL = "https://twitter.com/home?status=" + pageTitle + " " + fullURL;
+}
+<p>
+	<span class="meta-text">Share This:</span>
+	<a href="@facebookURL" data-shareURL="facebook" class="social icon-share-fb" target="_blank">Share On Facebook</a>
+	<a href="@twitterURL" data-shareURL="twitter" class="social icon-share-tw" target="_blank">Share On Twitter</a>
+</p>
